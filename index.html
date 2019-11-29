@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Scroller.js</title>
+    <link rel="shortcut icon" href="js.png" type="image/png">
+    <link rel="stylesheet" href="style.css">
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+</head>
+
+<body>
+
+    <!-- Pocetni screen -->
+
+    <div id="start_screen">
+        <h1 id="front_page_heading"> WELCOME TO SCROLLER.JS!</h1>
+        <p class="front_page_text"> Goal is to catch as many JavaScript Icons as you can!
+            <br>
+            The more icons you catch, the more knowledge you obtain!
+        </p>
+        <img src="programmer_front_page.png" alt="" srcset="" id="front_page_image">
+        <img src="js.png" alt="" srcset="" id="front_page_js_icon">
+        <button id="start_button" onclick="start_the_game()" class="btn" onmousedown="enterTheGame()">
+            <svg width="180px" height="60px" viewBox="0 0 180 60" class="border">
+                <polyline points="179,1 179,59 1,59 1,1 179,1" class="bg-line" />
+                <polyline points="179,1 179,59 1,59 1,1 179,1" class="hl-line" />
+            </svg>
+            <span>PLAY NOW</span>
+        </button>
+    </div>
+
+    <!-- Glavni container u kojem su ostali dijelovi igrice -->
+    <div id="container">
+
+        <!-- Gornji bar koji se sastoji od countera Score-a, života i brzine (levela) -->
+        <div id="score_help"> Score:
+            <span id="score">0</span> | Lives:
+            <span id="life"></span> | Speed:
+            <span id="speed">5</span>
+        </div>
+
+        <!-- Linija/grana koja dijeli gornji i donji dio containera -->
+        <div id="branch">
+
+        </div>
+
+        <!-- Ikone programera -->
+        <div id="programmer1" class="programmers"></div>
+        <div id="programmer2" class="programmers"></div>
+        <div id="programmer3" class="programmers"></div>
+
+        <!-- Ikone javascripta -->
+        <div id="js_icon1" class="js_icons" data-fail='1'></div>
+        <div id="js_icon2" class="js_icons" data-fail='2'></div>
+        <div id="js_icon3" class="js_icons" data-fail='3'></div>
+
+        <!-- Ikone za promasaje -->
+        <div id="fail1" class="fail"></div>
+        <div id="fail2" class="fail"></div>
+        <div id="fail3" class="fail"></div>
+
+        <!-- Cart (vagon) -->
+        <div id="cart">
+            <span id="score_1"></span>
+        </div>
+
+        <!-- Donji bar po kojem se kreće cart -->
+        <div id="floor">
+            <img src="rail.png" alt="" srcset="" id="rail">
+        </div>
+
+        <!-- Restart button -->
+        <button id="restart">GAME OVER
+            <br>
+            RESTART
+        </button>
+    </div>
+
+    <script src="jquery.min.js"></script>
+    <script src="collision_detection.js"></script>
+    <script src="variables.js"></script>
+    <script src="script.js"></script>
+    <script src="functions.js"></script>
+</body>
+
+</html>
